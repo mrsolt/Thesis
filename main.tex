@@ -1,0 +1,118 @@
+% Stanford University PhD thesis style -- modifications to the report style
+% This is unofficial so you should always double check against the
+% Registrar's office rules
+% See http://library.stanford.edu/research/bibliography-management/latex-and-bibtex
+% 
+% Example of use below
+% See the suthesis-2e.sty file for documentation
+%
+\documentclass{report}
+\usepackage{suthesis-2e}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{unsrtnat}
+\usepackage{notoccite}
+
+% Package used to add line numbers
+%\usepackage[left]{lineno}
+%\linenumbers
+
+\newcommand{\mevcc}{MeV/c$^2$}
+\newcommand{\gevcc}{GeV/c$^2$}
+\newcommand{\posi}{e^{+}}
+\newcommand{\ele}{e^{-}}
+\newcommand{\epem}{\posi\ele}
+\newcommand{\emem}{\ele\ele}
+\newcommand{\re}[1]{\textcolor{red}{[RE: #1]}}
+\newcommand{\aprime}{A^\prime}
+
+\dept{Physics}
+
+\begin{document}
+\title{Searching for Long-Lived Dark Photons with\\
+            the Heavy Photon Search Experiment}
+\author{Matthew Reagan Solt}
+\principaladviser{Philip Schuster}
+\firstreader{John Jaros}
+\secondreader{Dan Akerib}
+\thirdreader{Pat Burchat} %if needed
+ 
+\beforepreface
+\prefacesection{Abstract}
+
+A heavy photon (also called a dark photon or $\aprime$) is a hypothetical vector boson that arises from a massive $U(1)$ abelian gauge symmetry. Heavy photons kinetically mix with the Standard Model photon, thus they are a natural portal to hidden sectors that are favored in a variety of dark sector scenarios, particularly for dark matter at the sub-GeV mass scale. The Heavy Photon Search Experiment (HPS) is a fixed target experiment at Jefferson Laboratory dedicated to searching for heavy photons in the MeV - GeV mass range and kinetic mixing strength $\epsilon^2 \sim 10^{-5}-10^{-10}$. It does so through two distinct searches - a search for a narrow mass resonance and, for sufficiently small couplings, a search for secondary vertices beyond a large prompt QED background.
+
+In order to perform such searches, the HPS utilizes a compact, forward acceptance spectrometer that must be able to reconstruct particle masses and vertices with extreme precision. Heavy photons are electro-produced from a continuous electron beam incident on a thin tungsten foil, and HPS is able to reconstruct the momentum of the subsequent decays to $\epem$ pairs using a silicon vertex tracker (SVT). HPS currently has three data sets - engineering runs in 2015 and 2016 as well as a physics run with an upgraded detector in 2019 - all at different beam energies and currents. Presented in this dissertation are heavy photon physics and motivations, introduction to the HPS detector and reconstruction, detector upgrades and other physics models of interest, and the results from the displaced vertex search from the HPS 2016 Engineering Run which was taken with a 2.3 GeV, 200 nA continuous electron beam and collected a total luminosity of 10753 nb$^{-1}$ (equivalent to 5.4 days of continuous beam). 
+
+The 2016 Engineering Run displaced vertex search was performed in the mass range $60 - 150$ MeV and in the range of $\epsilon^2 \sim 10^{-10} - 10^{-8}$, and the new results, which have a sensitivity to canonical $\aprime$ production of $\sim$0.4 events over a region of mass/coupling parameter space, exclude $\aprime$ production above 6.05 times the canonical cross-section at a mass of 80.2 MeV and $\epsilon^2=2.12 \times 10^{-9}$. Even though HPS had insufficient data to set meaningful limits on the canonical $\aprime$ production, this analysis demonstrated that the displaced vertex method is viable, backgrounds can be reduced to acceptable levels, and larger data sets can yield real exclusions or discovery. In fact, the background required to perform a displaced $\aprime$ search (0.5 background events per mass search bin) was achieved in the unblinded 10\% portion of the data set by implementing a new set of cuts. This significant background reduction stands as a considerable improvement over the previous analysis and approaches the sensitivity needed to observe the first $\aprime$ candidates. After unblinding the entire data set, the remaining background events were studied and a search for decays which are further downstream and miss part of the acceptance of the tracker was performed. Finally, the sensitivity to another model which leads to displaced vertices is explored and preliminary projections show that HPS will have sensitivity to new territory with this data set. This combined work on the displaced vertex search is informative for future data sets that will search for $\aprime$s in the same way but include simple, yet critical, upgrades to the detector. Studies of the detector upgrades are discussed and the expected sensitivity to future data sets with these upgrades is shown.
+
+\clearpage
+
+%It consists on a thin tungsten target for $\aprime$ production through dark bremmstrahlung with minimal multiple scattering. This is followed by a silicon vertex tracker (SVT), which is under a uniform magnetic field from a dipole magnet to provide curvature for a momentum measurement and particle ID, which reconstructs particles mass and vertex precision. Finally, an electromagnetic calorimeter (ECal) is used for precision timing and triggering.
+
+%The Standard Model of Particle Physics (SM) is humanity's best attempt to explain matter and its interactions at the most fundamental level possible. The theoretical framework, built on Quantum Field Theory, was developed by many contributors in the 1960s. It contains a group of six quarks that make up protons, neutrons, and other unstable particles, a group of six leptons - electrons and neutrinos among them - and several gauge bosons that are responsible for three fundamental forces in nature - electromagnetism, strong nuclear force, and weak nuclear force. The last piece of the SM is the Higgs Boson, the explanation of origin of mass of the elementary particles, which was triumphantly discovered in 2012 at the Large Hadron Collider (LHC) - a multi-billion dollar project and the largest machine ever built by mankind. For almost 60 year, the SM has proven to be robust and has stood the test of time better than almost any model in any field of science and has remained our best explanation of elementary particles and their interactions.
+
+%However, cosmology has completely broken our understanding of particle physics. Through detailed astrophysical measurements, it has been shown that about 85\% of the total matter in the universe cannot be explained by the SM. Not only that, but this measurement from galactic rotation curves (how fast stars orbit their galactic centers) and weak gravitational lensing (light bending in the presence of a gravitational field) show that the dark matter that exists today is about the same amount that existed in the early universe based on measurements of the Cosmic Microwave Background (the afterglow of the Hot Big Bang). Furthermore, the fact that dark matter and SM matter have roughly the same amount of matter gives a strong hint that there was some interaction between dark matter and regular matter in the early universe. This gives a strong motivation to assume that dark matter has a thermal origin, meaning it was in thermal equilibrium in the early universe with SM matter and as a result is cold today. Thus the nature of dark matter is also linked to its origin, and there is a strong probability that there is some interaction, at least indirect interaction, with SM model particles that we can exploit in the laboratory - either with accelerator experiments or so-called direct detection experiments.
+
+%The first attempt to search for dark matter mostly centered around a specific model called Weakly Interacting Massive Particles (WIMPs). There is compelling motivation to search for WIMPs as the cross sections and mass appeared to be around the values that you would expect for weak sector particles such as W and Z Bosons (about 100 GeV, 100 times the mass of a proton). This coincidence is so remarkable, that it is dubbed the ``WIMP Miracle''. Furthermore, as an attempt to explain why the Higgs Boson mass is unnaturally many orders of magnitude lighter than it should have been, models of Supersymmetry (SUSY) were developed to shed light on the so-called hierarchy problem. SUSY requires each particle in the SM to have a supersymmetric partner (bosons to fermions and fermions to bosons) where many of which seemed to describe a WIMP-like object. This has been compelling motivation to search for WIMPs in hopes that one could shed light on the dark matter and hierarchy problem with the same object that could be probed by both direct detection and accelerator-based experiments.
+
+%To date of publication, both WIMPs and SUSY have not been discovered and accessible parameter space for these models will be probed with next generation direct detection experiments and the next runs by the LHC, respectively. In other words, WIMPs and weak scale SUSY with either be discovered or very nearly ruled out as an explanation for dark matter and the hierarchy problem. As an alternate, is is reasonable to compliment these searches on the mass scale where we know stable SM particles, such as electrons and protons, exist. However, once one crosses the so-called Lee-Wienberg Bound at 2 GeV (about twice the proton mass) the standard mechanism of thermal equilibrium gives an overproduction of dark matter in the early universe, greater than the observed 85\%. That is, assuming this SM - dark matter interactions are mediated by SM forces. Thus light dark matter, matter on the MeV-GeV scale, require at least one additional comparably light mediator. One such natural candidate is the so called heavy photon (or dark photon or $\aprime$).
+
+%The model for heavy photons, or more precisely an additional $U(1)$ symmetry in nature, was first derived by Bob Holdem in the 80s. This was largely ignored until the PAMELA satellite reported additional positrons originating from the center of the Milky Way Galaxy which was explained by Arkani-Hamed as dark matter annihilations in the center of the galaxy through a channel of heavy photons. In order to probe heavy photons at fixed target experiments, Schuster, Toro, and Essig developed a variety of methods to to so. Though dark matter annihilations have been ruled out as an explanation the observed anomaly of by PAMELA, heavy photons are still strongly motivated by a variety of models of light dark matter as a way to circumvent the Lee-Weinberg bound.
+
+%A variety of experiments could easily probe. However, it was proving quite difficult to probe a short decay length, which lies in  a region of highly motivated parameter space for heavy photons. This is the goal of the Heavy Photon Search Experiment - a fixed target experiment at Jefferson Laboratory - to probe the short decay lengths of heavy photons on the scale of $\sim$1 - 10 cm. This introduces a variety of technical challenges. First our particle tracker must capture the highly boosted heavy photons and as a consqequence our silicon is 0.5 mm from the beam plane. Any closer and we will damage the silicon sensors and any further we will not meet our science goals. In addition, the analysis will require an understanding of our backgrounds on the scale of about one part in a billion. That is, we must have the ability to differentiate between about one billion background processes that are prompt (i.e. they originate from the target), and a handful of true displaced signal processes from heavy photons. This requires mm-scale precision vertexing. Probing short-lived heavy photons through a precision vertexing experiment is the subject of this thesis.
+
+\prefacesection{Acknowledgments}
+
+Obtaining a a PhD is a rewarding accomplishment, but also requires a long and difficult journey through graduate school. This journey is a marathon composed of unexpected trials that would have been impossible to overcome alone. For me specifically, there is a long list of people who have made this work possible and have contributed immensely to my success as a graduate student.
+
+I would first like to thank my acting advisor John Jaros, mainly for his patience and encouragement over the entire course of my graduate studies. His guidance on the analysis was imperative to the success described in this thesis, and he turned my graduate school experience from good to great. I would like to thank my formal thesis advisor Philip Schuster for his willingness to take me on as a student and his general guidance over the past few years. I would also like to thank the remainder of my defense committee, Pat Burchat and Dan Akerib, for reading and approving this thesis and Peiro Pianneta for serving as the chair.
+
+I would like to thank the entire HPS collaboration, many of whom served as mentors over the course of my graduate studies and undoubtedly made me a better physicist. Specifically, I would like to thank those in the SLAC HPS group. This includes SVT Leader Tim Nelson, whose door was always open and since I considered him as having the best understanding of the HPS experiment as a whole, I could frequently ask him for advice on any topic. In addition, I thank Omar Moreno (another HPS student when I started) for his general guidance on a variety of topics and frequent encouragement. I have enjoyed following in his footsteps in the nice career path he seems to be paving for me. I would like to thank other notable members in the SLAC HPS group including Matt Graham for his guidance on the analysis, Norman Graf for his knowledge in tracking and software, and Takashi Maruyama who volunteered time in his retirement to generate the very large Monte Carlo samples presented in this dissertation. Towards the end of my PhD, a couple of LHC postdocs, Pierfrancesco Butti and Cameron Bravo, joined HPS and taught us all how to approach a more formal analysis.
+
+I would also like to thank former members of the SLAC HPS group, Sho Uemera and Pelle Hansson, who left while I was still a student but served as some of my first mentors at HPS. Both Sho and Pelle taught me how to simply get stuff to work. Beyond the HPS SLAC group, Stepan Stepanyan at Jefferson Lab was influential in teaching me how to run an experiment and how things operate in Hall B. I am excited to continue to work with many of these people for the next stage of my career.
+
+Beyond those in academics, there were many outside the field of physics who had a significant impact on my graduate studies. I would like to thank my family. First my loving mother and father from whom I had full support from birth. While growing up, they always made sure to attend and show their support at every soccer game, baseball game, and extracurricular event and during graduate school, they frequently sent care packages and provided me with flights home. I would like to thank my brother Michael for his encouragement to pursue my passions and for being my best friend, and my sister Kristin for her encouragement and for her curiosity in my work. During graduate school, I was fortunate to add two siblings-in-law, Tom and Hannah, who always supported me and frequently allowed me to overcrowd their homes when I came home to visit. I would like to thank Grandma and Grandpa Solt as well as Grammi Brown, who I consider to be my biggest fans and were always curious about what I was working on. In addition, my extended family spanning every corner of the country from Michigan, Wisconsin, Massachusetts, South Carolina, Southern California, and Texas were influential in their support.
+
+I would like to thank my many friends from various walks of life including my life-long childhood friends from SCS/HPBC (the community in which I grew up) and my Oakland University friends (where my interest in physics began to first develop). It was a privilege being a part of so many of their weddings over the course of my graduate studies. And of course, I would like to give a big thank you to my many friends in the Bay Area, especially from the Stanford University and PBC communities for keeping me sane outside the lab. Specifically, my small group was most influential in getting me through the infamous shelter-in-place of 2020, in which most of this thesis was written.
+
+Lastly, I would like to thank my many friends and colleagues of the American Scientific Affiliation (ASA), a group I discovered early in my graduate studies. It is here I learned the greater purpose beyond my work in its proper theological context. As fascinating as it was to learn the fundamental workings of the universe and the many opportunities to explore it, this remains the most important thing I have learned over the course of my PhD.
+
+There were many more people whom I could and should thank individually. However, thanking everyone who deserves it would at least double the length of this dissertation.
+
+\clearpage
+
+This thesis is dedicated to my late grandfather, ``Poppi'', who passed away shortly after I joined the HPS group. He taught me to always be curious about the world around me. I was fortunate to have the opportunity to explain my future work to him before he passed, and he would have loved to see the results.
+
+\afterpreface
+
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=0.85\textwidth]{figs/CandH.png}
+%    \caption{``Calvin \& Hobbes'' - Bill Watterson}
+%    \label{fig:placeholder}
+%\end{figure}
+
+\input{intro}
+\input{motivation}
+\input{detector}
+\input{reconstruction}
+\input{aprimes}
+\input{upgrades}
+\input{conclusion}
+
+\appendix
+%\chapter{L2L2}
+\input{L2L2}
+
+%%%%%%%%%%%%%%%%%%%%
+%   Bibliography   %
+%%%%%%%%%%%%%%%%%%%%
+
+%\bibliographystyle{plain}
+\bibliography{mybib}
+
+\end{document}
